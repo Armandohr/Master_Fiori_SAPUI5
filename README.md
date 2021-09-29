@@ -1,2 +1,2 @@
 # Master_Fiori_SAPUI5
-Master Fiori SAPUI%
+Master Fiori SAPUI5
