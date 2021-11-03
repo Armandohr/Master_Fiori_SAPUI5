@@ -7,7 +7,7 @@ sap.ui.define([
         createRecipient: function () {
             const oData = {
                 recipient: {
-                    name: "World onInit"
+                    name: "World"
                 }
             }
             return new JSONModel(oData);

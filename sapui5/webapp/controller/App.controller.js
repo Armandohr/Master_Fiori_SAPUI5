@@ -1,8 +1,10 @@
 sap.ui.define([
-    'sap/ui/core/mvc/Controller',
-    'sap/m/MessageToast'
+    'sap/ui/core/mvc/Controller'
 ],
-    function (Controller, MessageToast) {
+    /**
+     * @param {typeof sap.ui.core.mvc.Controller} Controller 
+     */
+    function (Controller) {
         'use strict';
 
         return Controller.extend("logaligroup.sapui5.controller.App", {
@@ -11,11 +13,8 @@ sap.ui.define([
 
             },
 
-            onShowHello: function () {
-                const oBundle = this.getView().getModel("i18n").getResourceBundle();
-                const sRecipient = this.getView().getModel().getProperty("/recipient/name");
-                const sMsg = oBundle.getText("helloMsg", [sRecipient]);
-                MessageToast.show(sMsg);
+            onOpenDialogHeader: function() {
+                this.getOwnerComponent().openHelloDialog();
             }
         });
     });
