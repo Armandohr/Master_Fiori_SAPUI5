@@ -14,7 +14,8 @@
                                 class="sapUiSmallMarginEnd"/>
                     </headerContent>
                     <content>
-                       <mvc:XMLView viewName="logaligroup.sapui5.view.HelloPanel"/>
+                        <mvc:XMLView viewName="logaligroup.sapui5.view.HelloPanel"/>
+                        <mvc:XMLView viewName="logaligroup.sapui5.view.InvoicesList"/>
                     </content>
                 </Page>
             </pages>
