@@ -24,11 +24,11 @@
       "internalConsoleOptions": "neverOpen",
       "port": 9229,
       "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Invoices/sapui5\"}",
         "FIORI_TOOLS_UI5_VERSION": "1.87.0",
         "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap/opu/odata\",\"destination\":\"Northwind\"}]"
-      },
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/V2\",\"destination\":\"Northwind\"}]",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Invoices/sapui5\"}"
+    },
       "args": [
         "--open",
         "'index.html'"
