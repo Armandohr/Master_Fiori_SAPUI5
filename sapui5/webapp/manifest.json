@@ -10,7 +10,17 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
-    "ach": "ach"
+    "ach": "ach",
+    "dataSources": {
+      "mainService": {
+        "uri": "/v2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -28,7 +38,6 @@
       "phone": true
     }
   },
-
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
@@ -38,7 +47,7 @@
       "id": "App"
     },
     "dependencies": {
-			"minUI5Version": "1.95.0",
+      "minUI5Version": "1.95.0",
       "libs": {
         "sap.ui.core": {},
         "sap.m": {},
@@ -58,8 +67,17 @@
         }
       },
       "invoices": {
-            "type": "sap.ui.model.json.JSONModel",
-            "uri": "Invoices.json"
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+      },
+      "northwind": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
       }
     },
     "resources": {
@@ -83,7 +101,9 @@
         {
           "name": "RouteApp",
           "pattern": "RouteApp",
-          "target": ["TargetApp"]
+          "target": [
+            "TargetApp"
+          ]
         }
       ],
       "targets": {
