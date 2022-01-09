@@ -12,6 +12,7 @@
 	"main": "webapp/index.html",
 	"scripts": {
 		"start": "fiori run --open 'index.html'",
+		"start-mockserver": "fiori run --open 'test/mockServer.html'",
 		"start-local": "fiori run --config ./ui5-local.yaml --open 'test/flpSandbox.html'",
 		"start-noflp": "fiori run --open 'index.html'",
 		"build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
